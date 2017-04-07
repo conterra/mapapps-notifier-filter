@@ -1,0 +1,48 @@
+{
+  "Bundle-SymbolicName": "dn_notifierfilter",
+  "Bundle-Version": "1.0.0-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Product-Name": "devnet-mapapps-notifier-filter",
+  "Bundle-Category": [
+    "sample"
+  ],
+  "Bundle-Icon": {},
+  "Bundle-License": {},
+  "Require-Bundle": [
+    {
+      "name": "notifier",
+      "version": "^3.2.1"
+    }
+  ],
+  "Components": [
+    {
+      "name": "NotifierFilterController",
+      "propertiesConstructor": true,
+      "properties": {
+        "hideLevel": 3,
+        "hideTime": 10000
+      },
+      "provides": [
+      ],
+      "references": [
+      ]
+    },
+    {
+      "name": "NotifierFilterTester",
+      "enabled": false,
+      "propertiesConstructor": true,
+      "properties": {
+      },
+      "provides": [
+      ],
+      "references": [
+        {
+          "name": "_logService",
+          "providing": "ct.framework.api.LogService"
+        }
+      ]
+    }
+  ]
+}

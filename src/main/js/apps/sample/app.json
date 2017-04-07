@@ -1,0 +1,147 @@
+{
+  "load": {
+    "bundleLocations": [
+      "localbundles",
+      "bundles"
+    ],
+    "allowedBundles": [
+      "system@^3.2.1",
+      "splashscreen@^3.2.1",
+      "map@^3.2.1",
+      "themes@^3.2.1",
+      "templates@^3.2.1",
+      "templatelayout@^3.2.1",
+      "windowmanager@^3.2.1",
+      "toolset@^3.2.1",
+      "toolrules@^3.2.1",
+      "basemaptoggler@^3.2.1",
+      "banner@^3.2.1",
+      "dn_notifierfilter"
+    ],
+    "skipBundles": []
+  },
+  "bundles": {
+    "dn_notifierfilter": {
+      "NotifierFilterController": {
+        "hideLevel": 3,
+        "hideTime": 10000
+      }
+    },
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://developernetwork.conterra.de"
+      }
+    },
+    "templates": {
+      "TemplateSelector": {
+        "componentEnabled": false
+      },
+      "TemplateModel": {
+        "_selectedTemplate": "seasons",
+        "_templates": [
+          {
+            "name": "seasons",
+            "widgets": [
+            ]
+          }
+        ]
+      }
+    },
+    "map": {
+      "MapState": {
+        "initialExtent": {
+          "xmin": -1100000,
+          "ymin": 4000000,
+          "xmax": 3500000,
+          "ymax": 8800000,
+          "spatialReference": {
+            "wkid": 3857
+          }
+        }
+      },
+      "MapModelFactory": {
+        "_configData": {
+          "maps": [
+            {
+              "id": "default",
+              "glass_pane": [],
+              "operationalLayer": [
+                {
+                  "title": "Standorte",
+                  "enabled": true,
+                  "service": "standorte",
+                  "category": {
+                    "title": "Standorte",
+                    "description": "",
+                    "imgUrl": ""
+                  },
+                  "layers": [
+                    "*"
+                  ],
+                  "id": "standorte0",
+                  "options": {}
+                }
+              ],
+              "baseLayer": [
+                {
+                  "title": "Streets",
+                  "service": "streets",
+                  "enabled": false
+                },
+                {
+                  "title": "Topo",
+                  "service": "worldTopo",
+                  "enabled": false
+                },
+                {
+                  "title": "Dark Canvas",
+                  "service": "darkcanvas",
+                  "enabled": true
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MappingResourceRegistryFactory": {
+        "_knownServices": {
+          "services": [
+            {
+              "id": "worldTopo",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+            },
+            {
+              "id": "streets",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+            },
+            {
+              "id": "darkcanvas",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer"
+            },
+            {
+              "id": "standorte",
+              "url": "http://services.conterra.de/arcgis/rest/services/mapapps/Standorte/FeatureServer",
+              "type": "AGS_FEATURE",
+              "title": "Standorte",
+              "description": "",
+              "layers": [
+                {
+                  "id": "0",
+                  "title": "Standorte",
+                  "enabled": true
+                }
+              ],
+              "options": {}
+            }
+          ]
+        }
+      }
+    }
+  }
+}
