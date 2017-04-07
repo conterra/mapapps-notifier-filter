@@ -2,7 +2,7 @@
 The Notifier Filter bundle allows you to filter notifications by the notification-level and the time between two identical notifications.
 
 ### Sample App ###
-http://www.mapapps.de/mapapps/resources/apps/downloads_introjs/index.html
+http://www.mapapps.de/mapapps/resources/apps/downloads_notifier_filter/index.html
 
 ### Define the mapapps remote base
 Before you can run the project you have to define the mapapps.remote.base property in the pom.xml-file:
