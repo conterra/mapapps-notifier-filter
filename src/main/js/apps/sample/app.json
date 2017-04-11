@@ -1,4 +1,8 @@
 {
+  "properties": {
+    "title": "Notifier Filter Sample",
+    "amdPackages": "apprt@^3.2.1"
+  },
   "load": {
     "bundleLocations": [
       "localbundles",
