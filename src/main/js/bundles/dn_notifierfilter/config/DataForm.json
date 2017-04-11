@@ -1,0 +1,42 @@
+{
+  "dataform-version": "1.0.0",
+  "type": "gridpanel",
+  "showLabels": true,
+  "children": [
+    {
+      "type": "selectbox",
+      "field": "hideLevel",
+      "label": "${hideLevel}",
+      "searchAttribute": "name",
+      "labelAttribute": "name",
+      "values": [
+        {
+          "name": "${levels.none}",
+          "value": 0
+        },
+        {
+          "name": "${levels.error}",
+          "value": 1
+        },
+        {
+          "name": "${levels.warning}",
+          "value": 2
+        },
+        {
+          "name": "${levels.info}",
+          "value": 3
+        }
+      ],
+      "required": true
+    },
+    {
+      "type": "numberspinner",
+      "min": 1000,
+      "inc": 1000,
+      "field": "hideTime",
+      "title": "${hideTime}",
+      "tooltip": "${hideTime}",
+      "required": true
+    }
+  ]
+}

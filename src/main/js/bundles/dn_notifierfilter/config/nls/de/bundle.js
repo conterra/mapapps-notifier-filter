@@ -14,6 +14,16 @@
  * limitations under the License.
  */
 define({
-    bundleName: "Notifier Filter",
-    bundleDescription: "Das Notifier Filter Bundle erlaubt es Benachrichtigungen anhand des Log-Levels oder des zeitlichen Abstands zweier identischer Benachrichtigungen zu filtern."
+    bundleName: "Notifier Filter Konfiguration",
+    bundleDescription: "Konfigurationsbundle f\u00fcr das Notifier Filter Bundle",
+    windowTitle: "Notifier Filter Konfiguration",
+    description: "Einstellungen f\u00fcr das Notifier Filter Bundle",
+    hideLevel: "Filter-Level:",
+    hideTime: "Zeitabstand [ms]:",
+    levels: {
+        none: "Keine Benachrichtigungen",
+        error: "Nur Error-Meldungen",
+        warning: "Nur Error-Meldungen und Warnungen",
+        info: "Alle Benachrichtigungen"
+    }
 });

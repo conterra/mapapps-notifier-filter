@@ -5,6 +5,7 @@
   "Bundle-Description": "${bundleDescription}",
   "Bundle-Vendor": "con terra GmbH",
   "Product-Name": "devnet-mapapps-notifier-filter",
+  "Config-Bundle-Location": "/config",
   "Bundle-Category": [
     "sample"
   ],

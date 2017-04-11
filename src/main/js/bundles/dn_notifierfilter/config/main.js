@@ -13,7 +13,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-define({
-    bundleName: "Notifier Filter",
-    bundleDescription: "Das Notifier Filter Bundle erlaubt es Benachrichtigungen anhand des Log-Levels oder des zeitlichen Abstands zweier identischer Benachrichtigungen zu filtern."
-});
+define(["dojo/i18n!./nls/bundle"], {});
