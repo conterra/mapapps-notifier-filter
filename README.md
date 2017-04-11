@@ -19,7 +19,7 @@ Change the mapapps.remote.base in the build.properties file and run:
 Installation Guide
 ------------------
 
-####Configuration
+#### Configuration:
 ```
 "dn_notifierfilter": {
     "NotifierFilterController": {
@@ -31,7 +31,7 @@ Installation Guide
 }
 ```
 
-####Hide-levels:
+#### Hide-levels:
 - 0 = no notifications
 - 1 = error (only errors)
 - 2 = warning (only errors and warnings)
