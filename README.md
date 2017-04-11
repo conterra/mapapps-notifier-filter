@@ -23,8 +23,16 @@ Installation Guide
 ```
 "dn_notifierfilter": {
     "NotifierFilterController": {
+        // hide level
         "hideLevel": 3,
+        // hide time between two identical notifications
         "hideTime": 10000
     }
 }
 ```
+
+####Hide-levels:
+- 0 = no notifications
+- 1 = error (only errors)
+- 2 = warning (only errors and warnings)
+- 3 = info (all notifications)
