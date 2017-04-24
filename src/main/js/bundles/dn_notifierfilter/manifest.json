@@ -33,7 +33,6 @@
     {
       "name": "NotifierFilterTester",
       "enabled": false,
-      "propertiesConstructor": true,
       "properties": {
       },
       "provides": [

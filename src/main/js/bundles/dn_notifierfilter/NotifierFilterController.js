@@ -20,18 +20,18 @@ define([
     "dojo/aspect",
     "ct/array",
     "ct/_Connect",
+    "ct/Stateful",
     "notifier/NotifierFactory"
-], function (declare, d_array, d_lang, d_aspect, ct_array, _Connect, NotifierFactory) {
+], function (declare, d_array, d_lang, d_aspect, ct_array, _Connect, Stateful, NotifierFactory) {
     this.LOG_LEVELS = {
         LOG_ERROR: 1,
         LOG_WARNING: 2,
         LOG_INFO: 3,
         LOG_DEBUG: 4
     };
-    return declare([_Connect], {
+    return declare([_Connect, Stateful], {
         activate: function () {
             var that = this;
-            var properties = this._properties;
             var entries = this.entries = [];
             d_aspect.before(NotifierFactory.prototype, "logged", function (entry) {
                 var index = ct_array.arrayFirstIndexOf(entries, {
@@ -45,7 +45,7 @@ define([
                 } else {
                     var oldEntry = entries[index];
                     var timeDiff = entry.get("date").getTime() - oldEntry.get("date").getTime();
-                    if (timeDiff > properties.hideTime) {
+                    if (timeDiff > that.hideTime) {
                         return that.showNotifier(entry);
                     } else {
                         return [null];
@@ -54,9 +54,8 @@ define([
             }, this);
         },
         showNotifier: function (entry) {
-            var properties = this._properties;
             var level = entry.get("level");
-            var hide = level > properties.hideLevel;
+            var hide = level > this.hideLevel;
             if (hide) {
                 return [null];
             } else {
