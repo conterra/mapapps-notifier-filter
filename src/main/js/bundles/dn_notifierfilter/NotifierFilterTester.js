@@ -15,13 +15,9 @@
  */
 define([
     "dojo/_base/declare",
-    "dojo/_base/array",
-    "dojo/_base/lang",
-    "dojo/aspect",
-    "ct/_Connect",
     "ct/async"
-], function (declare, d_array, d_lang, d_aspect, _Connect, ct_async) {
-    return declare([_Connect], {
+], function (declare, ct_async) {
+    return declare([], {
         activate: function () {
             ct_async(function () {
                 this._logService.error({
