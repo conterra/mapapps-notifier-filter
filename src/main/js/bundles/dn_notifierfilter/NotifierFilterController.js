@@ -16,20 +16,18 @@
 define([
     "dojo/_base/declare",
     "dojo/_base/array",
-    "dojo/_base/lang",
     "dojo/aspect",
     "ct/array",
-    "ct/_Connect",
     "ct/Stateful",
     "notifier/NotifierFactory"
-], function (declare, d_array, d_lang, d_aspect, ct_array, _Connect, Stateful, NotifierFactory) {
+], function (declare, d_array, d_aspect, ct_array, Stateful, NotifierFactory) {
     this.LOG_LEVELS = {
         LOG_ERROR: 1,
         LOG_WARNING: 2,
         LOG_INFO: 3,
         LOG_DEBUG: 4
     };
-    return declare([_Connect, Stateful], {
+    return declare([Stateful], {
         activate: function () {
             var that = this;
             var entries = this.entries = [];
