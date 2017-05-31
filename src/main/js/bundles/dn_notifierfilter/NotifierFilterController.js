@@ -49,7 +49,7 @@ define([
                         return [null];
                     }
                 }
-            }, this);
+            });
         },
         showNotifier: function (entry) {
             var level = entry.get("level");
